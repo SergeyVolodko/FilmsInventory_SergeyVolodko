@@ -1,0 +1,10 @@
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\FilmsInventory.dll
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\FilmsInventory.pdb
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.dll
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.pdb
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.csprojResolveAssemblyReference.cache
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\FilmsInventory.dll
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\FilmsInventory.pdb
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.dll
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.pdb
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.csprojResolveAssemblyReference.cache

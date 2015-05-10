@@ -1,0 +1,13 @@
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.ConsoleClient.exe.config
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.ConsoleClient.exe
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.ConsoleClient.pdb
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\obj\Debug\FilmsInventory.ConsoleClient.exe
+E:\Dropbox\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\obj\Debug\FilmsInventory.ConsoleClient.pdb
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.ConsoleClient.exe.config
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\obj\Debug\FilmsInventory.ConsoleClient.exe
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\obj\Debug\FilmsInventory.ConsoleClient.pdb
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.ConsoleClient.exe
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.ConsoleClient.pdb
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\obj\Debug\FilmsInventory.ConsoleClient.csprojResolveAssemblyReference.cache
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.dll
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko\bin\Debug\FilmsInventory.pdb
