@@ -6,6 +6,7 @@ using FilmsInventory.Factories.Impl;
 using FilmsInventory.Repositories;
 using FilmsInventory.Services;
 using FilmsInventory.Utils;
+using Microsoft.Practices.Unity;
 
 namespace FilmsInventory.ConsoleClient
 {
@@ -57,18 +58,11 @@ namespace FilmsInventory.ConsoleClient
         
         private static void Init()
         {
-            var entityFactory = new EntityFactory();
-            var priceCalculationFactory = new PriceCalculationFactory();
+            var container = new UnityContainer();
+            Bootstrapper.Configure(container);
 
-            var customerRepository = new InMemoryCustomerRepository();
-            var filmRepository = new InMemoryFilmRepository();
-            var rentRepository = new InMemoryRentRepository();
-
-            domainService = new DomainService(entityFactory, filmRepository, customerRepository);
-
-            rentService = new RentService(entityFactory, priceCalculationFactory,
-                                          rentRepository, filmRepository, customerRepository,
-                                          DefaultTimeProvider.Instance);
+            domainService = container.Resolve<Services.DomainService>();
+            rentService = container.Resolve<Services.RentService>();
         }
 
         private static void InitCustomers()

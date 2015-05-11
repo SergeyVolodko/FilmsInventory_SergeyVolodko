@@ -8,3 +8,10 @@ E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin
 E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.dll
 E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.pdb
 E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\obj\Debug\FilmsInventory.csprojResolveAssemblyReference.cache
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\Microsoft.Practices.Unity.dll
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\Microsoft.Practices.Unity.xml
+E:\Projects\FilmsInventory_SergeyVolodko\FilmsInventory_SergeyVolodko.Domain\bin\Debug\Microsoft.Practices.Unity.Configuration.xml

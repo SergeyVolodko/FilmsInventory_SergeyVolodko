@@ -11,7 +11,6 @@ namespace FilmsInventory.Services
 {
     public class RentService: IRentService
     {
-
         protected IFilmRepository filmRepository;
         protected IRentRepository rentRepository;
         protected ICustomerRepository customerRepository;

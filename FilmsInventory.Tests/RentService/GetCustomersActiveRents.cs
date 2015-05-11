@@ -58,8 +58,10 @@ namespace FilmsInventory.Tests.RentService
             var zombieland = CreateZombielandFilm();
             
             rentService.RentFilmByCustomer(zombieland.Name, igor.Name, RentData.TwoDays);
-
-            mockTimeProvider.Setup(t => t.UtcNow).Returns(new DateTime(2015, 3, 1));
+            
+            var privateObject = new PrivateObject(rentService);
+            var timeProvider = (TestTimeProvider)privateObject.GetField("timeProvider");
+            timeProvider.SetNowDate(new DateTime(2015, 3, 1));
 
             var customerRentals = rentService.GetCustomersActiveRents(igor.Name);
 

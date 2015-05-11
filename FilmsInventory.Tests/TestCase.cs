@@ -1,15 +1,11 @@
 ﻿
-using System;
 using FilmsInventory.Entities;
-using FilmsInventory.Factories;
-using FilmsInventory.Factories.Impl;
-using FilmsInventory.Repositories;
 using FilmsInventory.Services;
 using FilmsInventory.Tests.Data;
 using FilmsInventory.Utils;
+using Microsoft.Practices.Unity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using CoreDomainService = FilmsInventory.Services.DomainService;
 
 namespace FilmsInventory.Tests
 {
@@ -24,21 +20,11 @@ namespace FilmsInventory.Tests
         [TestInitialize]
         public void SetupFixure()
         {
-            var entityFactory = new EntityFactory();
-            var priceCalculationFactory = new PriceCalculationFactory();
+            var container = new UnityContainer();
+            Bootstrapper.Configure(container);
 
-            var customerRepository = new InMemoryCustomerRepository();
-            var filmRepository = new InMemoryFilmRepository();
-            var rentRepository = new InMemoryRentRepository();
-
-            mockTimeProvider = new Mock<TimeProvider>();
-            mockTimeProvider.Setup(t => t.UtcNow).Returns(new DateTime(2015, 1, 1));
-
-            this.domainService = new CoreDomainService(entityFactory, filmRepository, customerRepository);
-
-            this.rentService = new Services.RentService(entityFactory, priceCalculationFactory, 
-                                                        rentRepository, filmRepository, customerRepository,
-                                                        mockTimeProvider.Object);
+            this.domainService = container.Resolve<Services.DomainService>();
+            this.rentService = container.Resolve<Services.RentService>();
         }
 
         protected Film CreateMatrixFilm()
