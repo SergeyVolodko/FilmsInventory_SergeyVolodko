@@ -10,23 +10,19 @@ namespace FilmsInventory.Entities
 
     public class Film
     {
-        private FilmType type;
-
         public string Name { get; private set; }
 
-        public FilmType Type {
-            get { return type; }
-        }
+        public FilmType Type { get; private set; }
 
         public Film(string name, FilmType type)
         {
             this.Name = name;
-            this.type = type;
+            this.Type = type;
         }
 
         public void ChangeType(FilmType newType)
         {
-            this.type = newType;
+            this.Type = newType;
         }
     }
 }

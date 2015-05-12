@@ -9,12 +9,15 @@ namespace FilmsInventory.Factories.Impl
         {
             switch (filmType)
             {
-                case FilmType.NewReleases: return new NewReleasesCalculation(rentDaysCount);
-                case FilmType.RegularFilms: return new RegularFilmsCalculation(rentDaysCount);
-                case FilmType.OldFilms: return new OldFilmsCalculation(rentDaysCount);
+                case FilmType.NewReleases: 
+                    return new NewReleasesCalculation(rentDaysCount);
+                case FilmType.RegularFilms: 
+                    return new RegularFilmsCalculation(rentDaysCount);
+                case FilmType.OldFilms: 
+                    return new OldFilmsCalculation(rentDaysCount);
+                default:
+                    return new RegularFilmsCalculation(rentDaysCount);
             }
-
-            return new RegularFilmsCalculation(rentDaysCount);
         }
     }
 }

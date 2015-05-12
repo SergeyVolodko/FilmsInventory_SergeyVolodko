@@ -4,20 +4,15 @@ namespace FilmsInventory.Entities
 {
     public class Rent
     {
-        private Payment payment;
         public int Id { get; set; }
         public string CustomerName { get; private set; }
         public string FilmName { get; private set; }
         public int DaysCount { get; private set; }
         public DateTime StartDate { get; private set; }
-
-        public Payment Payment
-        {
-            get { return this.payment; }
-        }
+        public Payment Payment { get; private set; }
         public DateTime EndDate
         {
-            get { return StartDate.AddDays(DaysCount); }
+            get { return this.StartDate.AddDays(DaysCount); }
         }
 
         public Rent(string customerName, string filmName, DateTime startDate, int daysCount)
@@ -30,12 +25,12 @@ namespace FilmsInventory.Entities
 
         public bool IsActive(DateTime date)
         {
-            return StartDate <= date && date < EndDate;
+            return this.StartDate <= date && date < this.EndDate;
         }
 
         public void AssignPayment(Payment payment)
         {
-            this.payment = payment;
+            this.Payment = payment;
         }
     }
 }

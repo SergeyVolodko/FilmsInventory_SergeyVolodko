@@ -7,24 +7,15 @@ namespace FilmsInventory.Entities
         BonusPoints
     }
 
-    public struct Payment
+    public class Payment
     {
-        private readonly int cost;
-        private readonly Currency currency;
+        public int Cost { get; private set; }
+        public Currency Currency { get; private set; }
 
-        public int Cost
-        {
-            get { return this.cost; }
-        }
-
-        public Currency Currency
-        {
-            get { return this.currency; }
-        }
         public Payment(int cost, Currency currency)
         {
-            this.cost = cost;
-            this.currency = currency;
+            this.Cost = cost;
+            this.Currency = currency;
         }
     }
 }

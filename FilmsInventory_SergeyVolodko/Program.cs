@@ -1,27 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using FilmsInventory.Entities;
-using FilmsInventory.Factories;
-using FilmsInventory.Factories.Impl;
-using FilmsInventory.Repositories;
 using FilmsInventory.Services;
-using FilmsInventory.Utils;
 using Microsoft.Practices.Unity;
 
 namespace FilmsInventory.ConsoleClient
 {
     class Program
     {
-        protected static IDomainService domainService;
-        protected static IRentService rentService;
+        protected readonly static IDomainService domainService;
+        protected readonly static IRentService rentService;
 
         private static List<Customer> customers;
+
+        static Program()
+        {
+            var container = new UnityContainer();
+            Bootstrapper.Configure(container);
+
+            domainService = container.Resolve<DomainService>();
+            rentService = container.Resolve<RentService>();
+        }
 
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Sergey's video salon!");
             Console.WriteLine("===>Creating customers and films...");
-            Init();
             InitCustomers();
             InitFilms();
             ShowCustomers();
@@ -56,15 +60,6 @@ namespace FilmsInventory.ConsoleClient
             Console.ReadLine();
         }
         
-        private static void Init()
-        {
-            var container = new UnityContainer();
-            Bootstrapper.Configure(container);
-
-            domainService = container.Resolve<Services.DomainService>();
-            rentService = container.Resolve<Services.RentService>();
-        }
-
         private static void InitCustomers()
         {
             customers = new List<Customer>();
@@ -256,7 +251,8 @@ namespace FilmsInventory.ConsoleClient
                 {
                     ShowRentedFilm(rent);
                     var customer = domainService.GetCustomer(rent.CustomerName);
-                    Console.WriteLine(String.Format("Customer: {0} bonus points: {1}", customer.Name, customer.BonusPoints));
+                    Console.WriteLine(String.Format("Customer: {0} bonus points: {1}", 
+                        customer.Name, customer.BonusPoints));
                     Console.WriteLine("-------------------------------");
                 }
 
@@ -266,11 +262,13 @@ namespace FilmsInventory.ConsoleClient
 
                         if (rent.Payment.Currency == Currency.BonusPoints)
                         {
-                            Console.WriteLine(String.Format("{0} ({1}) {2} days (payed with {3} bonus points)", film.Name, film.Type, rent.DaysCount, rent.Payment.Cost));
+                            Console.WriteLine(String.Format("{0} ({1}) {2} days (payed with {3} bonus points)", 
+                                film.Name, film.Type, rent.DaysCount, rent.Payment.Cost));
                         }
                         else
                         {
-                            Console.WriteLine(String.Format("{0} ({1}) {2} days {3} EUR", film.Name, film.Type, rent.DaysCount, rent.Payment.Cost));
+                            Console.WriteLine(String.Format("{0} ({1}) {2} days {3} EUR", 
+                                film.Name, film.Type, rent.DaysCount, rent.Payment.Cost));
                         }
                     }
     }
